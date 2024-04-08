@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb on/off</title>
+    <style>
+      body {
+        height: 200px;
+        width: 300px;
+        margin: 100px auto;
+        background-color: black;
+      }
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+
+    <script>
+      function clikMe(state) {
+        // alert(state);
+        if (state == "on") {
+          document.body.style.backgroundColor = "yellow";
+          document
+            .getElementById("myimg")
+            .setAttribute("src", "./img/bulb2.png");
+        } else {
+          document.body.style.backgroundColor = "black";
+          document
+            .getElementById("myimg")
+            .setAttribute("src", "./img/bulb1.png");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <img src="./img/bulb1.png" id="myimg" alt="" />
+    <button onclick="clikMe('on')">on</button>
+    <button onclick="clikMe('off')">off</button>
+  </body>
+</html>
